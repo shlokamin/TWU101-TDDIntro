@@ -7,18 +7,13 @@ public class Factorial {
             throw new IllegalArgumentException("number cannot be negative");
         }
 
+        int factorial = 1;
 
-        if (i==0 || i ==1) {
-            return 1;
+        if (i>1) {
+            for (int j = 2; j <= i ; j++) {
+                factorial*=j;
+            }
         }
-
-        if (i==2){
-            return 2;
-        }
-
-        if (i==3){
-            return 6;
-        }
-        return -1;
+        return factorial;
     }
 }

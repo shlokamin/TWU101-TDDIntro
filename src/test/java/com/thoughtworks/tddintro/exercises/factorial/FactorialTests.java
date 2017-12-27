@@ -24,14 +24,14 @@ public class FactorialTests {
         assertThat(new Factorial().compute(1), is(1));
     }
 
-    @Test
-    public void shouldReturnTwoWhenNumberIsTwo(){
-        assertThat(factorial.compute(2), is(2));
+    @Test // Make me pass first
+    public void shouldReturnOneWhenNumberIsZero(){
+        assertThat(new Factorial().compute(0), is(1));
     }
 
     @Test
-    public void shouldReturnOneWhenNumberIsZero(){
-        assertThat(factorial.compute(0), is(1));
+    public void shouldReturnTwoWhenNumberIsTwo(){
+        assertThat(factorial.compute(2), is(2));
     }
 
     @Test
@@ -43,4 +43,6 @@ public class FactorialTests {
     public void shouldThrowIllegalArgumentExceptionWhenNumberIsNegative(){
         factorial.compute(-1);
     }
+
+
 }
